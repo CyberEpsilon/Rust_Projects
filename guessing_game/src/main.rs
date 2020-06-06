@@ -26,7 +26,7 @@ fn main() {
      *
      *
      */
-    loop {//
+    loop {//This loop runs until stopping condition is met. 
         println!("Please input your guess.");
 
         let mut guess = String::new();//mutable variable guess is bound to value String::new() --constructor that returns instance of String 
@@ -47,11 +47,6 @@ fn main() {
          *      program and returns successfully generated value that Ok contains (3) If io::Result instance produces Ok variant,
          *      expect() will display the string message argument "Failed to read line."
          */
-
-
-
-
-        
         //Without the line below, a mismatched type error(Rust type inference: can't compare number type with String) will occur
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,//if Result instance returns Ok, return num (guess user entered)
